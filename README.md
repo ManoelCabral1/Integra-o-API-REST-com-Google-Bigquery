@@ -1,12 +1,12 @@
 # Integração API REST com Google Bigquery :man_technologist:
 
-APIs REST são uma das fontes de dados mais comuns no dia a dia de trabalho do analista de dados. São por meio delas que a maioria das plafaformas sejam redes sociais, CRM, ecomerce, etc disponibilizam seus dados. Contudo uma dificuldade desse modelo de dados é que o formato padrão JSON, pode não ser tão intuitivo e fácil de interpretar como o formato tabular de planilhas ou tabelas em banco de dados.
+APIs REST são uma das fontes de dados mais comuns no dia a dia de trabalho do analista de dados. São por meio delas que a maioria das plataformas sejam redes sociais, CRM, ecomerce, etc disponibilizam seus dados. Contudo uma dificuldade desse modelo de dados é que o formato padrão JSON, pode não ser tão intuitivo e fácil de interpretar como o formato tabular de planilhas ou tabelas em banco de dados.
 
 Pensando em facilitar o acesso, o armazenamento  e interpretação do dados para um projeto onde se fazia necessário a coleta diária de informações em uma API. Projetei um pipeline integrando a API ao google bigquery (que uma plataforma na nuvem sem servidor para análise de dados).
 
 ## Requisitos para o projeto
 1. A coleta será diária e incremental sendo adicionada a tabela somente os dados referentes a d-1, isto é, a data da coleta menos um dia.
-2. A API tem endpoits (url de requisão) baseada em intervalos de data, logo deve haver um meio de persistir no banco somente os dados da data de interesse. 
+2. A API tem endpoints (url de requisição) baseada em intervalos de data, logo deve haver um meio de persistir no banco somente os dados da data de interesse. 
 3.  o processo deve ser automático  e resiliente a falhas.
 
 ## Solução
