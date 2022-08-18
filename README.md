@@ -179,7 +179,7 @@ def hello_pubsub(event, context):
     insert_rows(client, rows)
 ```
 
-A função hello_pubsub é ativada por evento, no caso a mensagem do pub/sub, assim que que o evento é disparado a função da inicia o processo de coleta e persistência dos dados.
+A função hello_pubsub é ativada por evento, no caso a mensagem do pub/sub, assim que que o evento é disparado a função inicia o processo de coleta e persistência dos dados.
 
 ## Conclusão
 As configurações em todas as ferramentas usadas devem ser feitas no console da Google Cloud Plataform. Lá existem vários tutoriais mostrando como usa-lás.
