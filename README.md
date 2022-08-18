@@ -113,16 +113,20 @@ def format_url(id):
 
     dates_str = f"&datainicial={dates['datainicial']}&datafinal={dates['datafinal']}"
 
-    url = "http://api.xxx.com.br/indicadores/indicadoresEmpresa?chave=6ba108b1097b48238d414b9296cb05efles43" + "&empresas[]=" + id + dates_str + "&periodo=1"
+    url = "http://api.xxx.com.br/indicadores/indicadoresEmpresa?chave=6ba108b1097b48238d414b9296cb05efles43" + 
+          "&empresas[]=" + id + dates_str + "&periodo=1"
 
     return url
 
 def extract_rows(row):
      '''função para extrair os campos de interesse no arquivo JSON'''
 
-     keys_to_extract = ['IdEmpresa', 'NomeEmpresa', 'Data', 'FB_Fas', 'FB_Engajamento', 'FB_Reacoes', 'FB_Comentarios', 'FB_Compartilhamentos', 'FB_Interacoes', 
-     'FB_Diferenca_Seguidores', 'TW_Seguidores', 'TW_Curtidas', 'TW_Retweets', 'TW_Engajamento', 'TW_Interacoes', 'TW_Diferenca_Seguidores', 
-     'IN_Seguidores', 'IN_Curtidas', 'IN_Comentarios', 'IN_Engajamento', 'IN_Interacoes', 'IN_Diferenca_Seguidores']
+     keys_to_extract = ['IdEmpresa', 'NomeEmpresa', 'Data', 'FB_Fas', 'FB_Engajamento', 'FB_Reacoes', 
+                       'FB_Comentarios', 'FB_Compartilhamentos', 'FB_Interacoes', 
+                       'FB_Diferenca_Seguidores', 'TW_Seguidores', 'TW_Curtidas', 'TW_Retweets', 
+                       'TW_Engajamento', 'TW_Interacoes', 'TW_Diferenca_Seguidores', 
+                       'IN_Seguidores', 'IN_Curtidas', 'IN_Comentarios', 'IN_Engajamento', 
+                       'IN_Interacoes', 'IN_Diferenca_Seguidores']
 
      return {key: row[key] for key in keys_to_extract}
 
