@@ -19,7 +19,7 @@ Pensando em facilitar o acesso, o armazenamento  e interpretação do dados para
 Relacionado ao item anterior, você pode configurar o Cloud Functions para disparar em resposta a eventos no ambiente, reduzindo ou eliminando a necessidade de ativação manual
 * Minha parte favorita é que agora você pode escrever o código em Python 3 (beta) e, claro, JavaScript (Node.JS).
 
-### Estrutura
+### Workflow
 ![estrutura-solucao-api-bigquery](https://github.com/ManoelCabral1/Prints/blob/main/estrutura-solucao-api-bigquery.png)
 
 1. Cloud Scheduler, um serviço de tarefas cron gerenciado que permite que qualquer aplicativo chame operações de lote, Big Data e infraestrutura em nuvem. O Cloud Scheduler executa uma tarefa ao enviar uma solicitação HTTP ou uma mensagem Cloud Pub/Sub para um destino específico em uma programação recorrente. O gerenciador do destino executa a tarefa e retorna uma resposta. Se a tarefa for realizada, um código de sucesso (2xx para HTTP/AppEngine e 0 para Pub/Sub) será retornado para o Cloud Scheduler. Se a tarefa falhar, um erro será enviado para o Cloud Scheduler, que tentará novamente até que o número máximo de tentativas seja atingido. O Cloud Scheduler inicia o processo com um job programado para rodar uma vez ao dia que dispara uma messagem para o Cloud Pub/Sub.
