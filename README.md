@@ -10,7 +10,7 @@ Pensando em facilitar o acesso, o armazenamento  e interpretação do dados para
 3.  o processo deve ser automático  e resiliente a falhas.
 
 ## Solução
- A maneira mais conveniente  que encontrei integrar a API ao bigquery via cloud functions. O Google Cloud Functions constitui uma plataforma de computação sem servidor orientada a eventos que oferece a capacidade de executar seu código na nuvem sem se preocupar com a infraestrutura subjacente.
+ A maneira mais conveniente  que encontrei para integrar a API ao bigquery  foi via cloud functions. O Google Cloud Functions constitui uma plataforma de computação sem servidor orientada a eventos que oferece a capacidade de executar seu código na nuvem sem se preocupar com a infraestrutura subjacente.
 
 ### O Cloud Functions oferece as seguintes vantagens fundamentais:
 
